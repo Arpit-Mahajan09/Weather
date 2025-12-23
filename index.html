@@ -1,28 +1,76 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Weather App</title>
-        <link rel="icon" type="image/png" href="images/icon.png">
-    </head>
-    <body class = "Body">
-        <header>
+    <html>
+        <head>
+            <link rel="stylesheet" href="style.css">
+            <title>Weather App</title>
+            <link rel="icon" type="image/png" href="images/icon.png">
+        </head>
+        <body class = "Body">
 
-        </header>
+     <div class="app-container">
+            <header>
+                <h1>Weather Dashboard</h1>
+            </header>
 
-        <h1>Weather Dashboard</h1>
-        <input type ="Text" id="cityInput" placeholder="Enter City Name">
-        <button id="search">Get Weather</button>
+            <div class="search-box">
+                <input type ="Text" id="cityInput" placeholder="Enter City Name">
+                <button id="search">Search</button>
+                <button id="locationdata">Location</button>
+            </div>
 
-        <div id="Weather Diplay"> 
 
+        <div class="dashboard" style = "display: none;"> 
+            
+            
+            <div id="temp-container" class="card"> 
+                <h3>Temperature</h3>
+                <p id="Temp" class="big-text"></p> 
+                    <div class = "details">
+                        <p id="feels_like"></p>
+                        <p id="temp_max"></p>
+                        <p id="temp_min"></p>
+                    </div>
+            </div>
+
+            <div id="wind" class="card"> 
+                <h3>Wind</h3>
+                    <div class = "details">
+                        <p id="speed"></p> 
+                        <p id="deg"></p>
+                        <p id="pressure"></p>
+                    </div>
+            </div>
+
+            <div id="Location" class="card">
+                <h3>Location</h3>
+                    <div class = "details">
+                        <p id="country"></p>             
+                        <p id="coord">
+                    </div>
+                </p>
+            </div>
         </div>
+        </div>
+            <br>
 
+    </div>
 
-        <footer>
-
-        </footer>
-
+        <script src="index.js"></script>
     </body>
 
-    <script src="index.js"></script>
-</html>
+        
+    </html>
+
+
+
+<!-- 
+01d.png -> http://openweathermap.org/img/wn/01d@2x.png 			clear sky
+02d.png ->  	02n.png ->  		few clouds
+03d.png ->	    03n.png ->  		scattered clouds
+04d.png ->  	04n.png ->  		broken clouds
+09d.png ->	    09n.png ->  		shower rain
+10d.png ->  	10n.png ->  		rain
+11d.png ->	    11n.png ->  		thunderstorm
+13d.png ->	    13n.png ->  		snow
+50d.png ->  	50n.png ->  		mist
+
+-->
