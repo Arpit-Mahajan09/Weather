@@ -1,4 +1,4 @@
-const apiKey = "2546ae4113fa553315d588f5ac7a6b1c";
+
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const locUrl = "https://api.openweathermap.org/data/2.5/weather?lat=";
 const imageUrl  = "http://openweathermap.org/img/wn/"; 
@@ -16,14 +16,14 @@ function getlocation(){
 }
 
 async function locationWeather(lat,lon) {
-    const response= await fetch(locUrl +`${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+    const response= await fetch(`/api/weather?lat=${lat}&lon=${lon}`)
     try{
         if (response.status == 404) {
                 alert("City not found");
                 return;
             }
 
-        var data =await response.json()    
+        const data =await response.json()    
         console.log(data)
 
         update(data)
@@ -100,7 +100,7 @@ cityInput.addEventListener("keydown",function(event){
 
 locBtn.addEventListener("click", () => {
     if ("geolocation" in navigator) {
-        getlocation()
+        getlocation()   
     } else {
         alert('Give acess to location')
     }
