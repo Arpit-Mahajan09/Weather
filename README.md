@@ -1,6 +1,6 @@
 # Weather 
 
-[Website-Link](https://vercel.com/arpit-s-projects-f1e3a5dd/~/settings/environment-variables)
+[Website-Link](https://weather-pi-tan-44.vercel.app/)
 
 ### Steps to use:
 
