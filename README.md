@@ -11,5 +11,5 @@
 
 ### Sources 
 
-Images: https://openweathermap.org/ 
+Images: https://openweathermap.org/ <br>
 API: https://openweathermap.org/
