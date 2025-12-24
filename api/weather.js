@@ -11,11 +11,9 @@ export default async function handler(req, res) {
     let externalUrl = "";
 
     
-    if (city) {
-        
+    if (city) {  
         externalUrl = `${baseUrl}?q=${city}&units=metric&appid=${API_KEY}`;
     } else if (lat && lon) {
-        
         externalUrl = `${baseUrl}?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
     } else {
         return res.status(400).json({ error: 'Missing city or coordinates' });

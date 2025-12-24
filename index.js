@@ -60,10 +60,11 @@ function update(data){
         document.getElementById("temp_max").innerHTML="Max Temp: "+(data.main.temp_max)+ "°C";
         document.getElementById("temp_min").innerHTML="Min Temp: "+(data.main.temp_min)+ "°C";
 
-        document.getElementById("speed").innerHTML="Speed: " + (data.wind.speed) + " km/h";
+        document.getElementById("speed").innerHTML="Speed: " + (data.wind.speed) + " m/s";
         document.getElementById("deg").innerHTML="Deg: " + (data.wind.deg)+ "°";
         document.getElementById("pressure").innerHTML="Pressure: " +(data.main.pressure) + "Pa";
 
+        document.getElementById("name").innerHTML = `City: ${data.name}`;
         document.getElementById("country").innerHTML=(data.sys.country);
 
         // document.getElementById("vis").src= imageUrl + data.weather[0].icon +`@2x.png`; 
