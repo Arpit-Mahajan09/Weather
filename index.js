@@ -88,7 +88,7 @@ function update(data){
 
 
 searchBtn.addEventListener("click", () => {
-    locationWeather(cityInput.value);
+    checkWeather(cityInput.value);
 });
 
 cityInput.addEventListener("keydown",function(event){
