@@ -36,7 +36,7 @@ async function locationWeather(lat,lon) {
 }
 
 async function checkWeather(city) {
-    const response= await fetch(apiUrl + city + `&appid=${apiKey}`)
+    const response= await fetch(`/api/weather?city=${encodeURIComponent(city.trim())}`)
     try{
         if (response.status == 404) {
                 alert("City not found");
@@ -62,7 +62,7 @@ function update(data){
 
         document.getElementById("speed").innerHTML="Speed: " + (data.wind.speed) + " m/s";
         document.getElementById("deg").innerHTML="Deg: " + (data.wind.deg)+ "°";
-        document.getElementById("pressure").innerHTML="Pressure: " +(data.main.pressure) + "Pa";
+        document.getElementById("pressure").innerHTML="Pressure: " +(data.main.pressure) + "hPa";
 
         document.getElementById("name").innerHTML = `City: ${data.name}`;
         document.getElementById("country").innerHTML=(data.sys.country);
